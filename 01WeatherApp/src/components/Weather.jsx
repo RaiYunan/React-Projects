@@ -50,11 +50,15 @@ function Weather() {
     
     async function fetchData(cityName){
         cityName=cityName.trim();
+        if(cityName==""){
+            alert("Enter City Name");
+            return;
+        }
        try {
         const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=85cb48b2e20fdcb89097aa331af09cc1`);
 
         if (!response.ok){
-            throw new Error("Error Occured!!");
+            alert("City not found!!")
             
         }
         const data=await response.json();
