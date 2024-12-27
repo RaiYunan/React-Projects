@@ -12,58 +12,57 @@ import windImg from '../assets/images/wind.png';
 
 function Weather() {
 
-    const [weatherImg,setWeatherImg]=useState(clearImg);
-    const [city,setCity]=useState("Dharan");
-    const[degree,setDegree]=useState("");
-    const [humidity,setHumidity]=useState("");
-    const [windSpeed,setWindspeed]=useState("");
+    const [weatherData, setWeatherData] = useState({
+        weatherImg: clearImg,
+        city: "Dharan",
+        degree: "",
+        humidity: "",
+        windSpeed: "",
+      });
+    
+
+      const API_KEY = '85cb48b2e20fdcb89097aa331af09cc1';
+      const BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
     const [input,setInput]=useState("");
 
-    function CheckWeather(weather){
-        console.log(weather);
-        if(weather=="Clouds"){
-            setWeatherImg(cloudImg);
-        }else if(weather=="Clear"){
-            setWeatherImg(clearImg);
-        }else if(weather=="Rain"){
-            setWeatherImg(rainImg)
-        }else if(weather=="Drizzle"){
-            setWeatherImg(drizzleImg)
-        }else if(weather=="Snow"){
-            setWeatherImg(snowImg)
-        }
-
-    }
+    const weatherImages = {
+        Clouds: cloudImg,
+        Clear: clearImg,
+        Rain: rainImg,
+        Drizzle: drizzleImg,
+        Snow: snowImg,
+      };
+      
+    const getWeatherImage = (weather) => weatherImages[weather] || clearImg;
 
     const displayData=(data)=>{
-        setDegree(Math.floor(data.main.temp-273));
-        setHumidity(data.main.humidity)
-        setWindspeed(data.wind.speed)
-        setCity(data.name);
+        setWeatherData({
+            weatherImg: getWeatherImage(data.weather[0].main),
+            city: data.name,
+            degree: Math.floor(data.main.temp - 273),
+            humidity: data.main.humidity,
+            windSpeed: data.wind.speed,
+        })
         setInput("");
-        CheckWeather(data.weather[0].main);
 
     }
 
 
     
     
-    async function fetchData(cityName){
-        cityName=cityName.trim();
-        if(cityName==""){
-            alert("Enter City Name");
+    const handleWeatherData=async(cityName)=>{
+        if(!cityName.trim()){
+            alert("Please Enter city name!")
             return;
         }
        try {
-        const response=await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=85cb48b2e20fdcb89097aa331af09cc1`);
-
+        const response=await fetch(`${BASE_URL}?q=${cityName}&appid=${API_KEY}`);
         if (!response.ok){
             alert("City not found!!")
             
         }
         const data=await response.json();
         displayData(data);
-        console.log(data);
     
        } catch (error) {
           console.log(error)
@@ -72,8 +71,7 @@ function Weather() {
     }
     useEffect(()=>{
 
-       
-        fetchData(city);
+        handleWeatherData(weatherData.city);
 
     },[])
 
@@ -90,31 +88,31 @@ function Weather() {
         onChange={(e)=>setInput(e.target.value)}
         spellCheck="false"
       />
-      <button className='rounded-2xl text-black bg-white px-4 py-2' onClick={()=>fetchData(input)} >Search</button>
+      <button className='rounded-2xl text-black bg-white px-4 py-2' onClick={()=>handleWeatherData(input)} >Search</button>
        </div>
             {/* Weather Information */}
      <div className='w-full max-w-fit mx-auto'>
-        <img src={weatherImg} className='h-40' alt="" />
+        <img src={weatherData.weatherImg} className='h-40' alt="" />
         
      </div>
 
      <div className='w-full max-w-fit mx-auto'>
-     <h1 className='text-6xl font-semibold'>{degree}°C</h1>
-     <h2 className='text-4xl font-medium'>{city}</h2>
+     <h1 className='text-6xl font-semibold'>{weatherData.degree}°C</h1>
+     <h2 className='text-4xl font-medium'>{weatherData.city}</h2>
      </div>
 
      <div className='flex justify-around mt-8 p-4'>
         <div className='flex gap-4'>
             <img src={humidityImg} className='h-fit relative top-2 max-h-8' />
             <div>
-                <h1>{humidity} %</h1>
+                <h1>{weatherData.humidity} %</h1>
                 <p>Humidity</p>
             </div>
         </div>
         <div className='flex gap-4'>
         <img src={windImg} className='' />
             <div>
-                <h1>{windSpeed} km/h</h1>
+                <h1>{weatherData.windSpeed} km/h</h1>
                 <p>Wind Speed</p>
             </div>
         </div>
