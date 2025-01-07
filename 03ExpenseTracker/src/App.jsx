@@ -23,7 +23,7 @@ function App() {
 
       <IncomeExpense income={income} expense={expense}/>
       {transactions.length>0 && <History transactions={transactions}/>}
-      <Input setTransactions={setTransactions} transaction={transactions} setIncome={setIncome} setExpense={setExpense}/>
+      <Input setTransactions={setTransactions} transactions={transactions} setIncome={setIncome} setExpense={setExpense}/>
     </div>
 
     </div>

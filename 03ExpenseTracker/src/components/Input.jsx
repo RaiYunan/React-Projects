@@ -1,24 +1,16 @@
 import React, { useEffect, useState } from 'react'
 
-function Input({setTransactions,transaction,setIncome,setExpense}) {
+function Input({setTransactions,transactions,setIncome,setExpense}) {
     const [text,setText]=useState("");
     const [amount,setAmount]=useState("");
     const addTransaction=()=>{
+        if(!text.trim()) return alert("Enter text...")
+        if(!amount.trim()) return alert("Enter amount...")
         
-        if(text.trim()){
-            if(amount.trim()){
-                setTransactions([...transaction,{text:text,id:Date.now(),amount:amount}]);
-                setText("")
-                setAmount("")
-            }else{
-                alert("Enter amount...")
-            }
-           
-    }else{
-        alert("Enter text...")
-    }
-    
-   
+        const newTransaction={text:text,id:Date.now(),amount:Number(amount)}
+        setTransactions([...transactions,newTransaction]);
+        setText("");
+        setAmount("");
         }
         
 
@@ -26,9 +18,9 @@ function Input({setTransactions,transaction,setIncome,setExpense}) {
         let totalIncome = 0;
         let totalExpense = 0;
       
-        transaction.forEach((trans) => {
+        transactions.forEach((trans) => {
             if (trans.amount > 0) {
-                totalIncome +=  Number(trans.amount);
+                totalIncome += trans.amount;
             } else {
                 totalExpense += Math.abs(trans.amount);
             }
@@ -37,13 +29,13 @@ function Input({setTransactions,transaction,setIncome,setExpense}) {
         setIncome(totalIncome);
         setExpense(totalExpense);
     
-   },[transaction])
+   },[transactions])
   return (
     <div className='mt-2'>
       <h2 className='font-bold'>Add new transaction</h2>
       <hr className='border-t-2 border-gray-500 my-2' />
       <div className='my-2'>
-        <h3 className='font-semibold'>Text</h3>
+        <label className='font-semibold'>Text</label>
         <input 
          type="text"
          value={text}
@@ -52,7 +44,7 @@ function Input({setTransactions,transaction,setIncome,setExpense}) {
          className='w-full p-2 border-gray-500 border-[2px] rounded-sm mt-2' />
       </div>
       <div>
-      <h3 className='font-semibold'>Amount <br />(negative-expense,positive-income)</h3>
+      <label className='font-semibold'>Amount <br />(negative-expense,positive-income)</label>
         <input 
          type="text"
          value={amount}
