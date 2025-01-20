@@ -1,11 +1,14 @@
 import { Heart,Coffee, Soup, HeartPulse } from 'lucide-react'
 import React, { useEffect, useState } from 'react'
+import { useFavourites } from '../context/FavouritesContext';
 
 
-function Recipecard({recipe}) {
+function Recipecard({recipes}) {
 
   const [loading,setLoading]=useState(false);
-  const [favourites,setFavorites]=useState({})
+  const {favouriteHandle,favouriteList,favourites} =useFavourites()
+
+  
   const Colors = {
     0: "bg-pink-100",      // Vibrant pink
   1: "bg-blue-100",      // Ocean blue
@@ -25,26 +28,21 @@ function Recipecard({recipe}) {
     return Colors[randomNumber];
   }
 
-  if(!recipe || !recipe.meals){
-    return <div className='font-semibold text-2xl text-center mt-6'>No recipes found...</div>
-  }
-// Option 1: If you want to track a single favorite
-const favouriteHandle = (id) => {
-  setFavorites((prev)=>({
-    ...prev,
-    [id]:!prev[id] 
-  }))
+  
 
- 
-}
 const navigateTodoVideo=(url)=>{
   window.open(url,"_blank");
 }
 
+useEffect(()=>{
+  console.log(favourites)
+  console.log(favouriteList)
+
+},[favourites])
    
   return (
     <div className='flex flex-wrap gap-4 justify-around rounded-xl my-6 w-full overflow-hidden relative'> {
-      recipe.meals.map((meal)=>{
+      recipes.map((meal)=>{
         return<div key={meal.idMeal} className={`${getRandomColor()} flex w-[260px]  cursor-pointer hover:scale-105 duration-200 flex-col p-2 gap-2 rounded-md `}  >
           <div className='relative'>
             <a href={meal.strYoutube}  target="_blank"
@@ -56,7 +54,7 @@ const navigateTodoVideo=(url)=>{
               <Soup/>
               <span>{Math.floor(Math.random()*4)+2} servings</span>
             </div >
-            <div onClick={()=>favouriteHandle(meal.idMeal)} className='absolute top-1 right-1 bg-white p-2 cursor-pointer rounded-full'>
+            <div onClick={()=>favouriteHandle(meal.idMeal,meal)} className='absolute top-1 right-1 bg-white p-2 cursor-pointer rounded-full'>
             <Heart className={`${favourites[meal.idMeal]?"fill-red-500 text-red-500":""}`} size={18}/>
             </div>
             

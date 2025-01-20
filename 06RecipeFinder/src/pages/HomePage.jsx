@@ -14,10 +14,12 @@ function HomePage() {
      
       const url=`https://www.themealdb.com/api/json/v1/1/search.php?s=${searchQuery}`;
       const response= await fetch(url);
+      
       if(response.ok){
         const data=await response.json();
-        console.log(data)
-        setRecipe(data);
+        console.log(searchQuery,data.meals);
+        setRecipe(data.meals || []);
+
       
       }
       
@@ -66,7 +68,8 @@ function HomePage() {
             </form>
             <h1 className='md:text-4xl sm:text-2xl text-xl font-bold'>Recommended Recipes</h1>
             <p className='text-lg'>Popular choices</p>
-            {recipe && <Recipecard recipe={recipe}/>}
+            {(!recipe || recipe.length === 0)? <div className='font-semibold text-2xl text-center mt-6'>No recipes found...</div>:null}
+            {recipe && <Recipecard recipes={recipe}/>}
 
 
     </div>

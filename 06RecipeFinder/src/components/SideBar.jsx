@@ -25,11 +25,11 @@ const DeskTopSideBar=()=>{
                 </div>
 
                 <ul className='flex flex-col gap-4'>
-                    <Link className='flex gap-2'>
+                    <Link to='/' className='flex gap-2'>
                        <Home/>
                        <span className='font-bold'>Home</span>
                     </Link>
-                    <Link className='flex gap-2'>
+                    <Link to="/favourites" className='flex gap-2'>
                        <Heart/>
                        <span className='font-bold'>Favourites</span>
                     </Link>
