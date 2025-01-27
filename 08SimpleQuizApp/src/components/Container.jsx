@@ -26,7 +26,7 @@ const Container = () => {
     setHasAnswered(false);
     setSelectedAnswer(null);
     }else{
-        setQuiziInished(true);
+        setQuizFinished(true);
 
     }
   }

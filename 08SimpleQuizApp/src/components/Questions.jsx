@@ -1,8 +1,8 @@
 import React, { useEffect, useState,useRef } from 'react'
 
 const Questions = ({data,questionIndex,selectedAnswer,hasAnswered,nextQuestion,checkAnswer,setQuizFinished}) => {
-  const [mins,setMins]=useState(data.length-1);
-  const [secs,setSecs]=useState(59);
+  const [mins,setMins]=useState(data.length);
+  const [secs,setSecs]=useState(0);
   const alertShown=useRef(false);
  useEffect(()=>{
   const timer=setInterval(() => {
