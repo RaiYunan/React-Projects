@@ -8,7 +8,7 @@ const Container = () => {
   const [hasAnswered,setHasAnswered]=useState(false);
   const [selectedAnswer,setSelectedAnswer]=useState(null);
   const [score,setScore]=useState(0);
-  const [quizFinished,setQuizFInished]=useState(false);
+  const [quizFinished,setQuizFinished]=useState(false);
 
   const checkAnswer=(ans)=>{
     setHasAnswered(true)
@@ -26,7 +26,7 @@ const Container = () => {
     setHasAnswered(false);
     setSelectedAnswer(null);
     }else{
-        setQuizFInished(true);
+        setQuiziInished(true);
 
     }
   }
@@ -34,7 +34,7 @@ const Container = () => {
   const resetHandle=()=>{
     setQuestionIndex(0);
     setScore(0);
-    setQuizFInished(false);
+    setQuizFinished(false);
     setHasAnswered(false);
     setSelectedAnswer(null);
 
@@ -46,7 +46,7 @@ const Container = () => {
       <h1 className="text-2xl font-semibold">Quiz App</h1>
       <div className="border-b-2 w-full"></div>
       
-      {quizFinished?<Reset score={score} data={data} resetHandle={resetHandle}/>:<Questions data={data} questionIndex={questionIndex} selectedAnswer={selectedAnswer} hasAnswered={hasAnswered} nextQuestion={nextQuestion} checkAnswer={checkAnswer} score={score} setScore={setScore}/>}
+      {quizFinished?<Reset score={score} data={data} resetHandle={resetHandle}/>:<Questions data={data} questionIndex={questionIndex} selectedAnswer={selectedAnswer} hasAnswered={hasAnswered} nextQuestion={nextQuestion} checkAnswer={checkAnswer} setQuizFinished={setQuizFinished}/>}
     </div>
   );
 };

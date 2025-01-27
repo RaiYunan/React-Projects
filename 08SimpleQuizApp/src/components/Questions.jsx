@@ -1,6 +1,38 @@
-import React from 'react'
+import React, { useEffect, useState,useRef } from 'react'
 
-const Questions = ({data,questionIndex,selectedAnswer,hasAnswered,nextQuestion,checkAnswer,score,setScore}) => {
+const Questions = ({data,questionIndex,selectedAnswer,hasAnswered,nextQuestion,checkAnswer,setQuizFinished}) => {
+  const [mins,setMins]=useState(data.length);
+  const [secs,setSecs]=useState(0);
+  const alertShown=useRef(false);
+ useEffect(()=>{
+  const timer=setInterval(() => {
+    setSecs((prevSecs)=>{
+      if(prevSecs===0){
+        if(mins===0){
+          if(!alertShown.current){
+            alert("Time's up Nigga!!")
+          
+         
+          setQuizFinished(true);
+          alertShown.current = true;
+          
+
+          }
+          clearInterval(timer);
+          
+          return 0;
+
+        }
+        setMins((prevMins)=>prevMins-1)
+        return 59;
+      }
+      return prevSecs-1;
+    })
+    
+  }, 1000);
+  return()=>clearInterval(timer)
+
+ },[mins])
     return(
         <div className="flex flex-col gap-5">
     <h2 className="text-lg font-normal">
@@ -33,8 +65,10 @@ const Questions = ({data,questionIndex,selectedAnswer,hasAnswered,nextQuestion,c
       Next
     </button>
     <span className="text-center">
-      Showing {questionIndex + 1} out of {data.length} questions
+      Showing {questionIndex + 1} out of {data.length} questions.
+      <p><strong>TIme Left:-</strong> {mins}:{secs<10?`0${secs}`:secs}</p>
     </span>
+    
     </div>
     )
 }
