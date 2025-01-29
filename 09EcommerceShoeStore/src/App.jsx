@@ -2,6 +2,7 @@ import { useState } from 'react'
 import {data} from "../src/data/data.jsx"
 import SideBar from './components/SideBar.jsx'
 import NavBar from './components/NavBar.jsx'
+import Recommended from './components/Recommended.jsx'
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
       {/*NavBar*/}
       <div className='flex-1'>
       <NavBar/>
+      <Recommended/>
       </div>      
     
     </div>
