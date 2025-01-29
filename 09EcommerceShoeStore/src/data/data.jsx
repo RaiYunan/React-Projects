@@ -4,7 +4,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/6125yAfsJKL._AC_UX575_.jpg",
     title: "Nike Air Monarch IV",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -15,7 +15,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
     title: "Nike Air Vapormax Plus",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -27,7 +27,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/51+P9uAvb1L._AC_UY695_.jpg",
     title: "Nike Waffle One Sneaker",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -38,7 +38,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
     title: "Nike Running Shoe",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -49,7 +49,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
     title: "Flat Slip On Pumps",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -60,7 +60,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
     title: "Knit Ballet Flat",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -72,7 +72,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61V9APfz97L._AC_UY695_.jpg",
     title: "Loafer Flats",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -84,7 +84,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71VaQ+V6XnL._AC_UY695_.jpg",
     title: "Nike Zoom Freak",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -96,7 +96,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61-cBsLhJHL._AC_UY695_.jpg",
     title: "Nike Men's Sneaker",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -108,7 +108,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg",
     title: "PUMA BLACK-OCE",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -119,7 +119,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
     title: "Pacer Future Sneaker",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -130,7 +130,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71jeoX0rMBL._AC_UX575_.jpg",
     title: "Unisex-Adult Super",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -141,7 +141,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
     title: "Roma Basic Sneaker",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -152,7 +152,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
     title: "Pacer Future Doubleknit",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -164,7 +164,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/81xXDjojYKS._AC_UX575_.jpg",
     title: "Fusion Evo Golf Shoe",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "100",
@@ -175,7 +175,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
     title: "Rainbow Chex Skate",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "100",
@@ -186,7 +186,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
     title: "Low-Top Trainers",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "100",
@@ -197,7 +197,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
     title: "Vans Unisex Low-Top",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "100",
@@ -208,7 +208,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
     title: "Classic Bandana Sneakers",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -219,7 +219,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
     title: "Chunky High Heel",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -230,7 +230,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
     title: "Slip On Stiletto High Heel",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "100",
@@ -241,7 +241,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
     title: "DREAM PAIRS Court Shoes",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -252,7 +252,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
     title: "Nike Air Vapormax Plus",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -264,7 +264,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/51PGWTXgf-L._AC_UY625_.jpg",
     title: "Low Mid Block Heels",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "200",
@@ -275,7 +275,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
     title: "Chunky High Heel",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -286,7 +286,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
     title: "Amore Fashion Stilettos",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "150",
@@ -297,7 +297,7 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
     title: "Bridal Sandals Glitter",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
@@ -308,12 +308,56 @@ export const data = [
   {
     img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
     title: "Wedding Prom Bridal",
-    star: <AiFillStar className="rating-star" />,
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
     reviews: "(123 reviews)",
     prevPrice: "$140,00",
     newPrice: "50",
     company: "Adidas",
     color: "black",
     category: "flats",
+  },
+  {
+    img: "https://nostrain.in/cdn/shop/files/BLACK-AND-ROYAL-BLUE-NATURAL-RUBBER-FLIP-FLOPS-SLIPPERS-MEN_3.webp?v=1695880403&width=2048",
+    title: "Mom's fav weapon",
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
+    reviews: "(123 reviews)",
+    prevPrice: "$1,000",
+    newPrice: "20",
+    company: "Nike",
+    color: "blue",
+    category: "slippers",
+  },
+  {
+    img: "https://5.imimg.com/data5/SELLER/Default/2022/6/RZ/CJ/VR/30515051/shapemed-customised-ortho-slippers-for-men.jpg",
+    title: "Elastic chappal",
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
+    reviews: "(123 reviews)",
+    prevPrice: "$1,000",
+    newPrice: "20",
+    company: "Nike",
+    color: "blue",
+    category: "slippers",
+  },
+  {
+    img: "https://www.bunnyslippers.com/shop/images/T/strawberry-slippers-1-sm.jpg",
+    title: "Strawberry Chappal",
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
+    reviews: "(123 reviews)",
+    prevPrice: "$1,000",
+    newPrice: "20",
+    company: "Nike",
+    color: "blue",
+    category: "slippers",
+  },
+  {
+    img: "data:image/jpeg;base64,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",
+    title: "Pookie Chappal",
+    star: <AiFillStar  fill="#DAA520" color="#DAA520"  />,
+    reviews: "(123 reviews)",
+    prevPrice: "$1,000",
+    newPrice: "20",
+    company: "Nike",
+    color: "blue",
+    category: "slippers",
   },
 ];
