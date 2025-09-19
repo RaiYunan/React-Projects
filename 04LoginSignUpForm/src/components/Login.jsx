@@ -52,7 +52,7 @@ function Login() {
     <div className='max-w-[450px] mx-auto py-10'>
     {error &&  <div className='text-white bg-sky-500 px-4 py-2 text-3xl rounded-md mb-6 text-center'>Invalid Email or Password</div>}
       
-       <h1 className='font-semibold text-3xl text-center mb-6'>Login</h1>
+       <h1 className='font-semibold text-3xl text-center mb-6'>Sign In to your Account</h1>
        <div className='flex gap-2 items-center pl-9'>
             <label htmlFor="">Email:</label>
             <input type="email" placeholder='' value={email} onChange={(e)=>setEmail(e.target.value)} className='border-[1.7px] p-2 rounded-sm border-slate-600 flex-grow my-4' />

@@ -83,7 +83,7 @@ function SignUp() {
   return (
     <div className='flex max-w-fit mx-auto gap-10'>
       <div className='w-[450px] py-16 flex flex-col gap-4'>
-        <h1 className='font-semibold text-3xl text-center'>Sign Up</h1>
+        <h1 className='font-semibold text-3xl text-center'>Create Your Account</h1>
         <div className='flex gap-2 items-center pl-9'>
             <label htmlFor="">Name:</label>
             <input type="text" name="name" placeholder='' value={userDetails.name} onChange={(e)=>handleChange(e)} className=' border-[1.7px] p-2 rounded-sm border-slate-600 flex-grow' />
